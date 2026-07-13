@@ -38,7 +38,7 @@ export STYLE="stripes"
 export TARGET_WIDTH=3840
 export TARGET_HEIGHT=2160
 export OUTPUT_FILE="wallpaper.png"
-export PALETTE="nord"
+export PALETTE="catppuccin-mocha"
 export CUSTOM_COLORS=""
 export SCALE=2
 
