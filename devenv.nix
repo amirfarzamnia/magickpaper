@@ -11,7 +11,6 @@
     imagemagick
   ];
 
-  # Custom script to manage and convert palettes automatically
   scripts = {
     sync-palettes.exec = ''
       #!/usr/bin/env bash
