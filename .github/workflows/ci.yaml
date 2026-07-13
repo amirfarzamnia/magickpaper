@@ -14,13 +14,18 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install Nix
-        uses: cachix/install-nix-action@v30
+        uses: cachix/install-nix-action@v31
 
-      - name: Install devenv
-        uses: cachix/devenv-action@v1
+      - name: Use Cachix for devenv
+        uses: cachix/cachix-action@v16
+        with:
+          name: devenv
 
-      - name: Run tests
+      - name: Install devenv.sh
+        run: nix profile add nixpkgs#devenv
+
+      - name: Build the devenv shell and run git hooks
         run: devenv test
