@@ -34,7 +34,7 @@ fi
 # ---------------------------------------------------------------------
 # DEFAULT PARAMETERS
 # ---------------------------------------------------------------------
-export STYLE="stripes"
+export STYLE="vertical-stripes"
 export TARGET_WIDTH=3840
 export TARGET_HEIGHT=2160
 export OUTPUT_FILE="wallpaper.png"

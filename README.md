@@ -16,8 +16,8 @@ A small shell tool that generates procedural wallpapers with ImageMagick. Pick a
 | `hexagon-honeycomb`                                  | `isometric-cubes`                                  | `mosaic-tiles`                                     |
 | ![polka-dots](previews/polka-dots.png)               | ![radial-burst](previews/radial-burst.png)         | ![stained-glass](previews/stained-glass.png)       |
 | `polka-dots`                                         | `radial-burst`                                     | `stained-glass`                                    |
-| ![stripes](previews/stripes.png)                     | ![waves](previews/waves.png)                       |                                                    |
-| `stripes`                                            | `waves`                                            |                                                    |
+| ![vertical-stripes](previews/vertical-stripes.png)   | ![waves](previews/waves.png)                       |                                                    |
+| `vertical-stripes`                                   | `waves`                                            |                                                    |
 
 All previews in this README are generated at 960x540 with the default `catppuccin-mocha` palette.
 
@@ -108,7 +108,7 @@ magickpaper -s <style> -p <palette> -w <width> -h <height> -o <output.png>
 
 | Flag | Description                                                                | Default            |
 | ---- | -------------------------------------------------------------------------- | ------------------ |
-| `-s` | Style name, matching a file in `styles/` (without the `.sh` extension)     | `stripes`          |
+| `-s` | Style name, matching a file in `styles/` (without the `.sh` extension)     | `vertical-stripes` |
 | `-p` | Palette name, matching a file in `palettes/` (without the `.sh` extension) | `catppuccin-mocha` |
 | `-w` | Target width, in pixels                                                    | `3840`             |
 | `-h` | Target height, in pixels                                                   | `2160`             |
@@ -134,7 +134,7 @@ magickpaper -s hexagon-honeycomb -p gruvbox-dark-hard -o wallpaper.png
 Skip palette files entirely and pass your own colors:
 
 ```sh
-magickpaper -s stripes -c "#1e1e2e #313244 #cdd6da #f38ba8" -o wallpaper.png
+magickpaper -s "vertical-stripes" -c "#1e1e2e #313244 #cdd6da #f38ba8" -o wallpaper.png
 ```
 
 ---
