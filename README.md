@@ -14,8 +14,8 @@ A small shell tool that generates procedural wallpapers with ImageMagick. Pick a
 | `bokeh-circles`                                      | `concentric-rings`                                 | `ascending-stripes`                                  |
 | ![hexagon-honeycomb](previews/hexagon-honeycomb.png) | ![isometric-cubes](previews/isometric-cubes.png)   | ![mosaic-tiles](previews/mosaic-tiles.png)           |
 | `hexagon-honeycomb`                                  | `isometric-cubes`                                  | `mosaic-tiles`                                       |
-| ![polka-dots](previews/polka-dots.png)               | ![radial-burst](previews/radial-burst.png)         | ![stained-glass](previews/stained-glass.png)         |
-| `polka-dots`                                         | `radial-burst`                                     | `stained-glass`                                      |
+| ![polka-dots](previews/polka-dots.png)               | ![radial-burst](previews/radial-burst.png)         | ![warped-grid](previews/warped-grid.png)             |
+| `polka-dots`                                         | `radial-burst`                                     | `warped-grid`                                        |
 | ![vertical-stripes](previews/vertical-stripes.png)   | ![waves](previews/waves.png)                       |                                                      |
 | `vertical-stripes`                                   | `waves`                                            |                                                      |
 
