@@ -4,7 +4,7 @@
 
 A small shell tool that generates procedural wallpapers with ImageMagick. Pick a style, pick a palette, get a PNG. No design software, no manual layer wrangling — just a script you can drop into a rotation, a rice setup, or a cron job.
 
-Many of the styles are inspired by the wallpaper collection at [huedini.io](https://www.huedini.io).
+> Many of the styles are inspired by the wallpaper collection at [huedini.io](https://www.huedini.io).
 
 ## Preview
 
@@ -21,17 +21,67 @@ Many of the styles are inspired by the wallpaper collection at [huedini.io](http
 
 All previews in this README are generated at 960x540 with the default `catppuccin-mocha` palette.
 
-## Requirements
+---
+
+## Installation & Setup
+
+Choose the installation method that fits your workflow.
+
+### Path A: NixOS & Nix Flakes
+
+If you use Nix, you do not need to install ImageMagick or any shell dependencies manually. The flake handles isolating the binary and mapping assets safely.
+
+#### 1. Run instantly without installing
+
+```sh
+nix run github:amirfarzamnia/magickpaper -- -s waves -o wallpaper.png
+```
+
+#### 2. Declarative System Installation
+
+Add `magickpaper` to your system or Home Manager configurations by adding the input to your `flake.nix`:
+
+```nix
+# flake.nix
+{
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    magickpaper.url = "github:amirfarzamnia/magickpaper";
+  };
+
+  outputs = { self, nixpkgs, magickpaper, ... }: {
+    # In your NixOS or Home Manager module:
+    # environment.systemPackages = [ magickpaper.packages.${pkgs.system}.default ];
+  };
+}
+```
+
+---
+
+### Path B: Traditional Manual Install
+
+#### Requirements
 
 - [ImageMagick](https://imagemagick.org/) (the `magick` command must be on your `PATH`)
-- Bash
+- **Bash**
 
-That's it for actually generating a wallpaper. If you want to sync palettes or regenerate previews, see [Development](#development) below.
+#### Clone & Run
+
+```sh
+git clone [https://github.com/amirfarzamnia/magickpaper.git](https://github.com/amirfarzamnia/magickpaper.git)
+cd magickpaper
+chmod +x magickpaper.sh
+./magickpaper.sh -s waves -o wallpaper.png
+```
+
+---
 
 ## Usage
 
+If installed via **Nix**, invoke the tool as `magickpaper`. If using **Traditional**, invoke it as `./magickpaper.sh`.
+
 ```sh
-./magickpaper.sh -s <style> -p <palette> -w <width> -h <height> -o <output.png>
+magickpaper -s <style> -p <palette> -w <width> -h <height> -o <output.png>
 ```
 
 ### Options
@@ -45,27 +95,29 @@ That's it for actually generating a wallpaper. If you want to sync palettes or r
 | `-o` | Output file path                                                           | `wallpaper.png`    |
 | `-c` | Space-separated list of custom hex colors, overrides `-p`                  | —                  |
 
-Internally the image is rendered at a higher resolution than requested and scaled down, which gives cleaner edges and softer gradients than rendering directly at the target size.
+> **Note:** Internally, images are rendered at a higher resolution than requested and scaled down. This provides cleaner edges and softer gradients than rendering directly at the target size.
 
 ### Examples
 
 Generate a 4K wallpaper using the `waves` style and the default palette:
 
 ```sh
-./magickpaper.sh -s waves -o wallpaper.png
+magickpaper -s waves -o wallpaper.png
 ```
 
 Use a specific palette:
 
 ```sh
-./magickpaper.sh -s hexagon-honeycomb -p gruvbox-dark-hard -o wallpaper.png
+magickpaper -s hexagon-honeycomb -p gruvbox-dark-hard -o wallpaper.png
 ```
 
 Skip palette files entirely and pass your own colors:
 
 ```sh
-./magickpaper.sh -s stripes -c "#1e1e2e #313244 #cdd6da #f38ba8" -o wallpaper.png
+magickpaper -s stripes -c "#1e1e2e #313244 #cdd6da #f38ba8" -o wallpaper.png
 ```
+
+---
 
 ## Styles
 
@@ -82,6 +134,8 @@ sync-palettes
 ```
 
 This clones the upstream repo into a temp directory, converts each base16 YAML scheme into `palettes/<scheme>.sh`, and cleans up after itself. Run it whenever you want the latest and full set of upstream schemes.
+
+---
 
 ## Development
 
