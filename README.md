@@ -4,7 +4,7 @@
 
 A small shell tool that generates procedural wallpapers with ImageMagick. Pick a style, pick a palette, get a PNG. No design software, no manual layer wrangling — just a script you can drop into a rotation, a rice setup, or a cron job.
 
-Many of the styles are inspired by the wallpaper collection at [huedini.io](https://www.huedini.io) — this project is an attempt to recreate that look procedurally instead of downloading static images, so every wallpaper can be recolored and resized on demand.
+Many of the styles are inspired by the wallpaper collection at [huedini.io](https://www.huedini.io).
 
 ## Preview
 
@@ -19,7 +19,7 @@ Many of the styles are inspired by the wallpaper collection at [huedini.io](http
 | ![stripes](previews/stripes.png)                     | ![waves](previews/waves.png)                       |                                                    |
 | `stripes`                                            | `waves`                                            |                                                    |
 
-All previews in this README are generated at 960x540 by `generate-previews` and live in [`previews/`](previews).
+All previews in this README are generated at 960x540.
 
 ## Requirements
 
@@ -110,7 +110,7 @@ Contributions are welcome, whether that's a new style, a bug fix, or a better de
 
 1. Fork the repo and create a branch for your change.
 2. If you're adding a style, drop a `styles/<name>.sh` file following the pattern of the existing ones, then run `generate-previews` so `previews/<name>.png` gets created and can be committed alongside it.
-3. Keep commit messages in [Conventional Commits](https://www.conventionalcommits.org/) format (`feat:`, `fix:`, `docs:`, `refactor:`, etc.) — this is enforced by a git hook if you're using devenv, and makes the history easier to skim and changelog.
+3. Keep commit messages in [Conventional Commits](https://www.conventionalcommits.org/) format (`feat:`, `fix:`, `docs:`, etc.) — this is enforced by a git hook if you're using devenv, and makes the history easier to skim and changelog.
 4. Make sure `shellcheck`/`shfmt` are happy with any shell you touch, and `nixfmt`/`statix`/`deadnix` are happy with any Nix you touch. Running inside `devenv shell` and committing will catch this for you automatically.
 5. Open a pull request describing what changed and why. Screenshots are appreciated for new styles.
 
