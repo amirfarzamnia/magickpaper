@@ -121,12 +121,10 @@ get_clut_expr() {
 # ---------------------------------------------------------------------
 # WALLPAPER GENERATION ENGINE (MODULAR)
 # ---------------------------------------------------------------------
-# Convert spaces to underscores for file parsing (e.g., "diagonal stripes" -> "diagonal_stripes.sh")
-STYLE_SLUG="${STYLE// /_}"
-STYLE_FILE="${SCRIPT_DIR}/styles/${STYLE_SLUG}.sh"
+STYLE_FILE="${SCRIPT_DIR}/styles/${STYLE}.sh"
 
 if [[ ! -f $STYLE_FILE ]]; then
-	error_exit "Unknown style pattern or missing module file: '$STYLE' (Expected: styles/${STYLE_SLUG}.sh)"
+	error_exit "Unknown style: '$STYLE'"
 fi
 
 # Source the individual style file to inherit local scope and execute layout
