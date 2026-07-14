@@ -2,7 +2,8 @@
 
 set -euo pipefail
 
-TARGET_DIR="./palettes"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+TARGET_DIR="$SCRIPT_DIR/../palettes"
 TMP_CLONE=$(mktemp -d)
 
 echo "Fetching latest tinted-theming base16 schemes..."
