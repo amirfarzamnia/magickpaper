@@ -7,7 +7,7 @@
   };
 
   outputs =
-    { nixpkgs, utils }:
+    { nixpkgs, utils, ... }:
     utils.lib.eachDefaultSystem (
       system:
       let
@@ -54,6 +54,7 @@
           '';
 
           meta = with pkgs.lib; {
+            mainProgram = "magickpaper";
             description = "A tool for generating wallpapers with ImageMagick";
             homepage = "https://github.com/amirfarzamnia/magickpaper";
             license = licenses.mit;
