@@ -16,8 +16,8 @@ A small shell tool that generates procedural wallpapers with ImageMagick. Pick a
 | `hexagon-honeycomb`                                  | `isometric-cubes`                                  | `mosaic-tiles`                                       |
 | ![polka-dots](previews/polka-dots.png)               | ![radial-burst](previews/radial-burst.png)         | ![warped-grid](previews/warped-grid.png)             |
 | `polka-dots`                                         | `radial-burst`                                     | `warped-grid`                                        |
-| ![vertical-stripes](previews/vertical-stripes.png)   | ![waves](previews/waves.png)                       |                                                      |
-| `vertical-stripes`                                   | `waves`                                            |                                                      |
+| ![vertical-stripes](previews/vertical-stripes.png)   | ![vertical-waves](previews/vertical-waves.png)     |                                                      |
+| `vertical-stripes`                                   | `vertical-waves`                                   |                                                      |
 
 All previews in this README are generated at 960x540 with the default `catppuccin-mocha` palette.
 
@@ -34,7 +34,7 @@ If you use Nix, you do not need to install ImageMagick or any shell dependencies
 #### 1. Run instantly without installing
 
 ```sh
-nix run github:amirfarzamnia/magickpaper -- -s waves -o wallpaper.png
+nix run github:amirfarzamnia/magickpaper -- -s vertical-waves -o wallpaper.png
 ```
 
 #### 2. Declarative System Installation
@@ -91,7 +91,7 @@ cd magickpaper
 chmod +x magickpaper.sh
 
 # Generate your first wallpaper
-./magickpaper.sh -s waves -o wallpaper.png
+./magickpaper.sh -s vertical-waves -o wallpaper.png
 ```
 
 ---
@@ -119,10 +119,10 @@ magickpaper -s <style> -p <palette> -w <width> -h <height> -o <output.png>
 
 ### Examples
 
-Generate a 4K wallpaper using the `waves` style and the default palette:
+Generate a 4K wallpaper using the `vertical-waves` style and the default palette:
 
 ```sh
-magickpaper -s waves -o wallpaper.png
+magickpaper -s vertical-waves -o wallpaper.png
 ```
 
 Use a specific palette:
