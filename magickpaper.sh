@@ -45,7 +45,7 @@ export SCALE=2
 # ---------------------------------------------------------------------
 # ARGUMENT PARSING
 # ---------------------------------------------------------------------
-while getopts "s:w:h:o:c:p" opt; do
+while getopts "s:w:h:o:c:p:" opt; do
 	case "$opt" in
 	s) STYLE="$OPTARG" ;;
 	w) TARGET_WIDTH="$OPTARG" ;;
