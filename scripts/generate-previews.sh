@@ -2,11 +2,9 @@
 
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-GENERATOR="$SCRIPT_DIR/../magickpaper.sh"
-STYLE_DIR="$SCRIPT_DIR/../styles"
-OUTPUT_DIR="$SCRIPT_DIR/../previews"
+GENERATOR="magickpaper.sh"
+STYLE_DIR="styles"
+OUTPUT_DIR="previews"
 
 WIDTH=960
 HEIGHT=540
