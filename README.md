@@ -8,16 +8,18 @@ A small shell tool that generates procedural wallpapers with ImageMagick. Pick a
 
 ## Preview
 
-|                                                      |                                                    |                                                      |
-| ---------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------------- |
-| ![bokeh-circles](previews/bokeh-circles.png)         | ![concentric-rings](previews/concentric-rings.png) | ![ascending-stripes](previews/ascending-stripes.png) |
-| `bokeh-circles`                                      | `concentric-rings`                                 | `ascending-stripes`                                  |
-| ![hexagon-honeycomb](previews/hexagon-honeycomb.png) | ![isometric-cubes](previews/isometric-cubes.png)   | ![mosaic-tiles](previews/mosaic-tiles.png)           |
-| `hexagon-honeycomb`                                  | `isometric-cubes`                                  | `mosaic-tiles`                                       |
-| ![polka-dots](previews/polka-dots.png)               | ![radial-burst](previews/radial-burst.png)         | ![warped-grid](previews/warped-grid.png)             |
-| `polka-dots`                                         | `radial-burst`                                     | `warped-grid`                                        |
-| ![vertical-stripes](previews/vertical-stripes.png)   | ![waves](previews/waves.png)                       |                                                      |
-| `vertical-stripes`                                   | `waves`                                            |                                                      |
+|                                                        |                                                      |                                                        |
+| ------------------------------------------------------ | ---------------------------------------------------- | ------------------------------------------------------ |
+| ![ascending-stripes](previews/ascending-stripes.png)   | ![bokeh-circles](previews/bokeh-circles.png)         | ![concentric-rings](previews/concentric-rings.png)     |
+| `ascending-stripes`                                    | `bokeh-circles`                                      | `concentric-rings`                                     |
+| ![descending-stripes](previews/descending-stripes.png) | ![hexagon-honeycomb](previews/hexagon-honeycomb.png) | ![horizontal-stripes](previews/horizontal-stripes.png) |
+| `descending-stripes`                                   | `hexagon-honeycomb`                                  | `horizontal-stripes`                                   |
+| ![isometric-cubes](previews/isometric-cubes.png)       | ![mosaic-tiles](previews/mosaic-tiles.png)           | ![polka-dots](previews/polka-dots.png)                 |
+| `isometric-cubes`                                      | `mosaic-tiles`                                       | `polka-dots`                                           |
+| ![radial-burst](previews/radial-burst.png)             | ![vertical-stripes](previews/vertical-stripes.png)   | ![warped-grid](previews/warped-grid.png)               |
+| `radial-burst`                                         | `vertical-stripes`                                   | `warped-grid`                                          |
+| ![waves](previews/waves.png)                           |                                                      |                                                        |
+| `waves`                                                |                                                      |                                                        |
 
 All previews in this README are generated at 960x540 with the default `catppuccin-mocha` palette.
 
