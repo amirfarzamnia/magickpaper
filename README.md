@@ -4,20 +4,20 @@
 
 A small shell tool that generates procedural wallpapers with ImageMagick. Pick a style, pick a palette, get a PNG. No design software, no manual layer wrangling — just a script you can drop into a rotation, a rice setup, or a cron job.
 
-> Many of the styles are inspired by the wallpaper collection at [huedini.io](https://www.huedini.io).
+> Some of the styles are inspired by the wallpaper collection at [huedini.io](https://www.huedini.io).
 
 ## Preview
 
-|                                                      |                                                    |                                                    |
-| ---------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
-| ![bokeh-circles](previews/bokeh-circles.png)         | ![concentric-rings](previews/concentric-rings.png) | ![diagonal-stripes](previews/diagonal-stripes.png) |
-| `bokeh-circles`                                      | `concentric-rings`                                 | `diagonal-stripes`                                 |
-| ![hexagon-honeycomb](previews/hexagon-honeycomb.png) | ![isometric-cubes](previews/isometric-cubes.png)   | ![mosaic-tiles](previews/mosaic-tiles.png)         |
-| `hexagon-honeycomb`                                  | `isometric-cubes`                                  | `mosaic-tiles`                                     |
-| ![polka-dots](previews/polka-dots.png)               | ![radial-burst](previews/radial-burst.png)         | ![stained-glass](previews/stained-glass.png)       |
-| `polka-dots`                                         | `radial-burst`                                     | `stained-glass`                                    |
-| ![vertical-stripes](previews/vertical-stripes.png)   | ![waves](previews/waves.png)                       |                                                    |
-| `vertical-stripes`                                   | `waves`                                            |                                                    |
+|                                                      |                                                    |                                                      |
+| ---------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------------- |
+| ![bokeh-circles](previews/bokeh-circles.png)         | ![concentric-rings](previews/concentric-rings.png) | ![ascending-stripes](previews/ascending-stripes.png) |
+| `bokeh-circles`                                      | `concentric-rings`                                 | `ascending-stripes`                                  |
+| ![hexagon-honeycomb](previews/hexagon-honeycomb.png) | ![isometric-cubes](previews/isometric-cubes.png)   | ![mosaic-tiles](previews/mosaic-tiles.png)           |
+| `hexagon-honeycomb`                                  | `isometric-cubes`                                  | `mosaic-tiles`                                       |
+| ![polka-dots](previews/polka-dots.png)               | ![radial-burst](previews/radial-burst.png)         | ![stained-glass](previews/stained-glass.png)         |
+| `polka-dots`                                         | `radial-burst`                                     | `stained-glass`                                      |
+| ![vertical-stripes](previews/vertical-stripes.png)   | ![waves](previews/waves.png)                       |                                                      |
+| `vertical-stripes`                                   | `waves`                                            |                                                      |
 
 All previews in this README are generated at 960x540 with the default `catppuccin-mocha` palette.
 
