@@ -1,5 +1,5 @@
 {
-  description = "A tool for generating wallpapers with ImageMagick";
+  description = "A tool for generating procedural wallpapers with ImageMagick";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -55,7 +55,7 @@
 
           meta = with pkgs.lib; {
             mainProgram = "magickpaper";
-            description = "A tool for generating wallpapers with ImageMagick";
+            description = "A tool for generating procedural wallpapers with ImageMagick";
             homepage = "https://github.com/amirfarzamnia/magickpaper";
             license = licenses.mit;
             platforms = platforms.all;
