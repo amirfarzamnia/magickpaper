@@ -19,7 +19,7 @@ Many of the styles are inspired by the wallpaper collection at [huedini.io](http
 | ![stripes](previews/stripes.png)                     | ![waves](previews/waves.png)                       |                                                    |
 | `stripes`                                            | `waves`                                            |                                                    |
 
-All previews in this README are generated at 960x540.
+All previews in this README are generated at 960x540 with the default `catppuccin-mocha` palette.
 
 ## Requirements
 
