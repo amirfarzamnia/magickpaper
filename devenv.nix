@@ -9,11 +9,9 @@
     yq-go
     jq
     imagemagick
-    git-cliff
   ];
 
   scripts = {
-    generate-changelog.exec = builtins.readFile ./scripts/generate-changelog.sh;
     generate-previews.exec = builtins.readFile ./scripts/generate-previews.sh;
     sync-palettes.exec = builtins.readFile ./scripts/sync-palettes.sh;
   };
