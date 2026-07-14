@@ -63,7 +63,7 @@
 
         packages.default = packages.magickpaper;
 
-        # Allows quick testing with `nix run github:username/magickpaper -- -s vertical-waves -o test.png`
+        # Allows quick testing with `nix run github:username/magickpaper -- -s waves -o test.png`
         apps.default = {
           type = "app";
           program = "${packages.magickpaper}/bin/magickpaper";
