@@ -60,17 +60,37 @@ Add `magickpaper` to your system or Home Manager configurations by adding the in
 
 ### Path B: Traditional Manual Install
 
-#### Requirements
+Follow the steps below to install system dependencies, clone the repository, and run the script on your platform.
 
-- [ImageMagick](https://imagemagick.org/) (the `magick` command must be on your `PATH`)
-- **Bash**
+#### 1. Install Prerequisites
 
-#### Clone & Run
+Before running the script, you must have **Bash** and **ImageMagick** installed, with the `magick` command added to your system's execution path.
+
+| Platform            | Install Command                                   | Notes                                                                                                               |
+| ------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **macOS**           | `brew install imagemagick`                        | Requires [Homebrew](https://brew.sh/). Bash is installed by default.                                                |
+| **Ubuntu / Debian** | `sudo apt update && sudo apt install imagemagick` | Ensure you are on ImageMagick v7+ (earlier versions use `convert` instead of `magick`).                             |
+| **Fedora / RHEL**   | `sudo dnf install ImageMagick`                    |                                                                                                                     |
+| **Arch Linux**      | `sudo pacman -S imagemagick`                      |                                                                                                                     |
+| **Windows**         | `winget install ImageMagick.ImageMagick`          | Run in PowerShell. Ensure "Add to PATH" is checked during installation. Requires Git Bash or WSL to run the script. |
+
+> 💡 **Verify Installation:** You can verify everything is set up correctly by running `magick -version` in your terminal. If it returns version details, you are ready to go.
+
+---
+
+#### 2. Clone & Run
+
+Once the dependencies are installed, run the following commands in your terminal:
 
 ```sh
-git clone [https://github.com/amirfarzamnia/magickpaper.git](https://github.com/amirfarzamnia/magickpaper.git)
+# Clone the repository
+git clone https://github.com/amirfarzamnia/magickpaper.git
 cd magickpaper
+
+# Make the script executable
 chmod +x magickpaper.sh
+
+# Generate your first wallpaper
 ./magickpaper.sh -s waves -o wallpaper.png
 ```
 
