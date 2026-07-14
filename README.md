@@ -110,7 +110,7 @@ Contributions are welcome, whether that's a new style, a bug fix, or a better de
 
 1. Fork the repo and create a branch for your change.
 2. If you're adding a style, drop a `styles/<name>.sh` file following the pattern of the existing ones, then run `generate-previews` so `previews/<name>.png` gets created and can be committed alongside it.
-3. Keep commit messages in [Conventional Commits](https://www.conventionalcommits.org/) format (`feat:`, `fix:`, `docs:`, etc.) — this is enforced by a git hook if you're using devenv, and makes the history easier to skim and changelog.
+3. Keep commit messages in [Conventional Commits](https://www.conventionalcommits.org/) format (`feat:`, `fix:`, `docs:`, etc.) — this is enforced by a git hook if you're using devenv.
 4. Make sure `shellcheck`/`shfmt` are happy with any shell you touch, and `nixfmt`/`statix`/`deadnix` are happy with any Nix you touch. Running inside `devenv shell` and committing will catch this for you automatically.
 5. Open a pull request describing what changed and why. Screenshots are appreciated for new styles.
 
