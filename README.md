@@ -2,7 +2,7 @@
 
 # magickpaper
 
-A small shell tool that generates procedural wallpapers with ImageMagick. Pick a style, pick a palette, get a PNG. No design software, no manual layer wrangling — just a script you can drop into a rotation, a rice setup, or a cron job.
+A tool for generating procedural wallpapers with ImageMagick. Pick a style, pick a palette, get a PNG. No design software, no manual layer wrangling — just a script you can drop into a rotation, a rice setup, or a cron job.
 
 > Some of the styles are inspired by the wallpaper collection at [huedini.io](https://www.huedini.io).
 
