@@ -1,0 +1,48 @@
+name: Generate Style Previews
+on:
+  push:
+    paths:
+      - 'styles/**'
+      - 'magickpaper.sh'
+  workflow_dispatch:
+jobs:
+  generate-previews:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v7
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+      - name: Generate Previews Directly
+        run: |
+          chmod +x magickpaper.sh
+
+          GENERATOR="magickpaper.sh"
+          STYLE_DIR="styles"
+          OUTPUT_DIR="previews"
+          WIDTH=960
+          HEIGHT=540
+
+          mkdir -p "$OUTPUT_DIR"
+          echo "Generating previews..."
+
+          for style_file in "$STYLE_DIR"/*.sh; do
+            [[ -e $style_file ]] || continue
+
+            style="$(basename "$style_file" .sh)"
+            output="$OUTPUT_DIR/$style.png"
+
+            echo "Generating $output"
+            bash "$GENERATOR" -s "$style" -w "$WIDTH" -h "$HEIGHT" -o "$output"
+          done
+
+          echo "Previews are available in $OUTPUT_DIR"
+      - name: Commit Generated Previews
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto-generate style previews"
+          file_pattern: "previews/*.png"
