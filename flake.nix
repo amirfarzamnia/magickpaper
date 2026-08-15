@@ -22,30 +22,22 @@
 
           nativeBuildInputs = [ pkgs.makeWrapper ];
 
-          # We need imagemagick for 'magick', and coreutils/gnused/bash for script execution
           buildInputs = [
             pkgs.bash
             pkgs.imagemagick
-            pkgs.coreutils
-            pkgs.gnused
           ];
 
           installPhase = ''
             runHook preInstall
 
             mkdir -p $out/bin $out/share/magickpaper
-
-            # Copy styles, palettes, and the core script to a shared directory
             cp -r styles palettes magickpaper.sh $out/share/magickpaper/
 
-            # Write a wrapper to ensure magickpaper always runs with its styles/palettes directory local to it,
-            # and that 'magick' and other standard utilities are available in its PATH.
             makeWrapper $out/share/magickpaper/magickpaper.sh $out/bin/magickpaper \
               --prefix PATH : ${
                 pkgs.lib.makeBinPath [
+                  pkgs.bash
                   pkgs.imagemagick
-                  pkgs.coreutils
-                  pkgs.gnused
                 ]
               } \
               --chdir $out/share/magickpaper
@@ -64,7 +56,7 @@
 
         packages.default = packages.magickpaper;
 
-        # Allows quick testing with `nix run github:username/magickpaper -- -s waves -o test.png`
+        # Allows quick testing with `nix run github:amirfarzamnia/magickpaper -- -s waves -o test.png`
         apps.default = {
           type = "app";
           program = "${packages.magickpaper}/bin/magickpaper";
