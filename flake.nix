@@ -6,7 +6,7 @@
   };
 
   outputs =
-    { nixpkgs, ... }:
+    { self, nixpkgs, ... }:
     let
       inherit (nixpkgs) lib;
 
@@ -26,15 +26,13 @@
       packages = forAllSystems (
         { pkgs, ... }:
         let
-          magickpaper = pkgs.stdenv.mkDerivation {
+          magickpaper = pkgs.stdenvNoCC.mkDerivation {
             pname = "magickpaper";
             version = "0.1.0";
 
             src = ./.;
 
-            nativeBuildInputs = [
-              pkgs.makeWrapper
-            ];
+            nativeBuildInputs = [ pkgs.makeWrapper ];
 
             dontConfigure = true;
             dontBuild = true;
@@ -50,9 +48,8 @@
               makeWrapper \
                 "$out/share/magickpaper/magickpaper.sh" \
                 "$out/bin/magickpaper" \
-                --set PATH "${
+                --prefix PATH : "${
                   lib.makeBinPath [
-                    pkgs.bash
                     pkgs.coreutils
                     pkgs.imagemagick
                   ]
@@ -75,7 +72,7 @@
                 -o "$output"
 
               test -s "$output"
-              ${pkgs.imagemagick}/bin/magick identify "$output"
+              ${lib.getExe pkgs.imagemagick} identify "$output"
 
               runHook postInstallCheck
             '';
@@ -96,55 +93,19 @@
       );
 
       apps = forAllSystems (
-        { pkgs, ... }:
+        { system, ... }:
         let
-          package = pkgs.callPackage (
-            {
-              stdenv,
-              makeWrapper,
-              bash,
-              coreutils,
-              imagemagick,
-            }:
-            stdenv.mkDerivation {
-              pname = "magickpaper";
-              version = "0.1.0";
-              src = ./.;
-
-              nativeBuildInputs = [ makeWrapper ];
-
-              dontConfigure = true;
-              dontBuild = true;
-
-              installPhase = ''
-                install -Dm755 magickpaper.sh \
-                  "$out/share/magickpaper/magickpaper.sh"
-
-                cp -r styles palettes "$out/share/magickpaper/"
-
-                makeWrapper \
-                  "$out/share/magickpaper/magickpaper.sh" \
-                  "$out/bin/magickpaper" \
-                  --set PATH "${
-                    lib.makeBinPath [
-                      bash
-                      coreutils
-                      imagemagick
-                    ]
-                  }"
-              '';
-            }
-          ) { };
+          pkg = self.packages.${system}.magickpaper;
         in
         {
           default = {
             type = "app";
-            program = "${package}/bin/magickpaper";
+            program = lib.getExe pkg;
           };
 
           magickpaper = {
             type = "app";
-            program = "${package}/bin/magickpaper";
+            program = lib.getExe pkg;
           };
         }
       );
