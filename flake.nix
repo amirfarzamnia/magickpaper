@@ -50,7 +50,6 @@
               makeWrapper \
                 "$out/share/magickpaper/magickpaper.sh" \
                 "$out/bin/magickpaper" \
-                --chdir "$out/share/magickpaper" \
                 --set PATH "${
                   lib.makeBinPath [
                     pkgs.bash
@@ -126,7 +125,6 @@
                 makeWrapper \
                   "$out/share/magickpaper/magickpaper.sh" \
                   "$out/bin/magickpaper" \
-                  --chdir "$out/share/magickpaper" \
                   --set PATH "${
                     lib.makeBinPath [
                       bash
