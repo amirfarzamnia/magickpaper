@@ -46,7 +46,6 @@
 
   scripts = {
     generate-previews.exec = builtins.readFile ./scripts/generate-previews.sh;
-    sync-palettes.exec = builtins.readFile ./scripts/sync-palettes.sh;
   };
 
   # ============================================================================
