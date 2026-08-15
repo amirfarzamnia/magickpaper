@@ -14,14 +14,14 @@ mkdir -p "$OUTPUT_DIR"
 echo "Generating previews..."
 
 for style_file in "$STYLE_DIR"/*.sh; do
-	[[ -e $style_file ]] || continue
+  [[ -e $style_file ]] || continue
 
-	style="$(basename "$style_file" .sh)"
-	output="$OUTPUT_DIR/$style.png"
+  style="$(basename "$style_file" .sh)"
+  output="$OUTPUT_DIR/$style.png"
 
-	echo "Generating $output"
+  echo "Generating $output"
 
-	bash "$GENERATOR" -s "$style" -w "$WIDTH" -h "$HEIGHT" -o "$output"
+  bash "$GENERATOR" -s "$style" -w "$WIDTH" -h "$HEIGHT" -o "$output"
 done
 
 echo "Previews are available in $OUTPUT_DIR"

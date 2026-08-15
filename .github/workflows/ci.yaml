@@ -1,5 +1,4 @@
 name: CI
-
 on:
   push:
     branches:
@@ -7,25 +6,19 @@ on:
   pull_request:
     branches:
       - main
-
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
-
       - name: Install Nix
         uses: cachix/install-nix-action@v31
-
       - name: Use Cachix for devenv
         uses: cachix/cachix-action@v16
         with:
           name: devenv
-
       - name: Install devenv.sh
         run: nix profile add nixpkgs#devenv
-
       - name: Build the devenv shell and run git hooks
         run: devenv test
