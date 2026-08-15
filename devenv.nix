@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   # ============================================================================
   # Metadata
@@ -81,10 +81,4 @@
     # Shell
     shellcheck.enable = true;
   };
-
-  # ============================================================================
-  # Declarative files
-  # ============================================================================
-
-  files.".markdownlint.json".json = config.git-hooks.hooks.markdownlint.settings.configuration;
 }
