@@ -2,65 +2,153 @@
   description = "A tool for generating procedural wallpapers with ImageMagick";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
   outputs =
-    { nixpkgs, utils, ... }:
-    utils.lib.eachDefaultSystem (
-      system:
-      let
-        pkgs = import nixpkgs { inherit system; };
-      in
-      rec {
-        packages.magickpaper = pkgs.stdenv.mkDerivation {
-          pname = "magickpaper";
-          version = "0.1.0";
+    { nixpkgs, ... }:
+    let
+      inherit (nixpkgs) lib;
 
-          src = ./.;
+      systems = lib.systems.flakeExposed;
 
-          nativeBuildInputs = [ pkgs.makeWrapper ];
+      forAllSystems =
+        f:
+        lib.genAttrs systems (
+          system:
+          f {
+            pkgs = nixpkgs.legacyPackages.${system};
+            inherit system;
+          }
+        );
+    in
+    {
+      packages = forAllSystems (
+        { pkgs, ... }:
+        let
+          magickpaper = pkgs.stdenv.mkDerivation {
+            pname = "magickpaper";
+            version = "0.1.0";
 
-          buildInputs = [
-            pkgs.bash
-            pkgs.imagemagick
-          ];
+            src = ./.;
 
-          installPhase = ''
-            runHook preInstall
+            nativeBuildInputs = [
+              pkgs.makeWrapper
+            ];
 
-            mkdir -p $out/bin $out/share/magickpaper
-            cp -r styles palettes magickpaper.sh $out/share/magickpaper/
+            dontConfigure = true;
+            dontBuild = true;
 
-            makeWrapper $out/share/magickpaper/magickpaper.sh $out/bin/magickpaper \
-              --prefix PATH : ${
-                pkgs.lib.makeBinPath [
-                  pkgs.bash
-                  pkgs.imagemagick
-                ]
-              } \
-              --chdir $out/share/magickpaper
+            installPhase = ''
+              runHook preInstall
 
-            runHook postInstall
-          '';
+              install -Dm755 magickpaper.sh \
+                "$out/share/magickpaper/magickpaper.sh"
 
-          meta = with pkgs.lib; {
-            mainProgram = "magickpaper";
-            description = "A tool for generating procedural wallpapers with ImageMagick";
-            homepage = "https://github.com/amirfarzamnia/magickpaper";
-            license = licenses.mit;
-            platforms = platforms.all;
+              cp -r styles palettes "$out/share/magickpaper/"
+
+              makeWrapper \
+                "$out/share/magickpaper/magickpaper.sh" \
+                "$out/bin/magickpaper" \
+                --chdir "$out/share/magickpaper" \
+                --set PATH "${
+                  lib.makeBinPath [
+                    pkgs.bash
+                    pkgs.coreutils
+                    pkgs.imagemagick
+                  ]
+                }"
+
+              runHook postInstall
+            '';
+
+            doInstallCheck = true;
+
+            installCheckPhase = ''
+              runHook preInstallCheck
+
+              output="$TMPDIR/magickpaper-test.png"
+
+              "$out/bin/magickpaper" \
+                -s vertical-stripes \
+                -w 32 \
+                -h 18 \
+                -o "$output"
+
+              test -s "$output"
+              ${pkgs.imagemagick}/bin/magick identify "$output"
+
+              runHook postInstallCheck
+            '';
+
+            meta = {
+              mainProgram = "magickpaper";
+              description = "A tool for generating procedural wallpapers with ImageMagick";
+              homepage = "https://github.com/amirfarzamnia/magickpaper";
+              license = lib.licenses.mit;
+              platforms = lib.platforms.unix;
+            };
           };
-        };
+        in
+        {
+          inherit magickpaper;
+          default = magickpaper;
+        }
+      );
 
-        packages.default = packages.magickpaper;
+      apps = forAllSystems (
+        { pkgs, ... }:
+        let
+          package = pkgs.callPackage (
+            {
+              stdenv,
+              makeWrapper,
+              bash,
+              coreutils,
+              imagemagick,
+            }:
+            stdenv.mkDerivation {
+              pname = "magickpaper";
+              version = "0.1.0";
+              src = ./.;
 
-        # Allows quick testing with `nix run github:amirfarzamnia/magickpaper -- -s waves -o test.png`
-        apps.default = {
-          type = "app";
-          program = "${packages.magickpaper}/bin/magickpaper";
-        };
-      }
-    );
+              nativeBuildInputs = [ makeWrapper ];
+
+              dontConfigure = true;
+              dontBuild = true;
+
+              installPhase = ''
+                install -Dm755 magickpaper.sh \
+                  "$out/share/magickpaper/magickpaper.sh"
+
+                cp -r styles palettes "$out/share/magickpaper/"
+
+                makeWrapper \
+                  "$out/share/magickpaper/magickpaper.sh" \
+                  "$out/bin/magickpaper" \
+                  --chdir "$out/share/magickpaper" \
+                  --set PATH "${
+                    lib.makeBinPath [
+                      bash
+                      coreutils
+                      imagemagick
+                    ]
+                  }"
+              '';
+            }
+          ) { };
+        in
+        {
+          default = {
+            type = "app";
+            program = "${package}/bin/magickpaper";
+          };
+
+          magickpaper = {
+            type = "app";
+            program = "${package}/bin/magickpaper";
+          };
+        }
+      );
+    };
 }
