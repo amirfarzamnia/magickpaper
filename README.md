@@ -64,7 +64,7 @@ You need:
 Install ImageMagick with your package manager:
 
 | Platform | Command |
-| --------------- | ------------------------------------------------- |
+| --- | --- |
 | macOS | `brew install imagemagick` |
 | Debian / Ubuntu | `sudo apt update && sudo apt install imagemagick` |
 | Fedora / RHEL | `sudo dnf install ImageMagick` |
@@ -119,7 +119,7 @@ magickpaper -s <style> -p <palette> -w <width> -h <height> -o <output.png>
 ### Options
 
 | Option | Description | Default |
-| ------ | ------------------------------------------ | ------------------ |
+| --- | --- | --- |
 | `-s` | Style name from `styles/` | `vertical-stripes` |
 | `-p` | Palette name from `palettes/` | `catppuccin-mocha` |
 | `-w` | Width in pixels | `3840` |
@@ -190,15 +190,12 @@ base00 ... base0F
 
 The repository uses palettes from the [Base16 schemes](https://github.com/tinted-theming/schemes) collection.
 
-To update the bundled palettes, enter the development environment and run:
+## Automation
 
-```sh
-sync-palettes
-```
+This repository uses GitHub Actions to automate routine maintenance:
 
-This downloads the upstream schemes, converts them to shell-sourceable files, and replaces the contents of `palettes/`.
-
-You can also skip palettes entirely with `-c` and provide your own colors.
+- **Palette Sync (`.github/workflows/sync-palettes.yml`):** Runs weekly on a schedule to fetch the latest Base16 schemes from Tinted Theming and commits updated scripts to `palettes/`.
+- **Preview Generation (`.github/workflows/generate-previews.yml`):** Automatically triggers on pushes modifying files in `styles/` or `magickpaper.sh` to update PNG previews in `previews/`.
 
 ## Development
 
@@ -211,22 +208,6 @@ devenv shell
 ```
 
 It provides ImageMagick, `yq`, `jq`, and the project's helper commands.
-
-### Update palettes
-
-```sh
-sync-palettes
-```
-
-### Regenerate previews
-
-```sh
-generate-previews
-```
-
-This runs every style at 960×540 and updates the images in `previews/`.
-
-Run it after adding or changing a style.
 
 ### Checks
 
@@ -241,9 +222,9 @@ Contributions are welcome.
 ### Adding a style
 
 1. Add `styles/<name>.sh`.
-1. Run `generate-previews`.
-1. Commit the generated `previews/<name>.png`.
-1. Open a pull request with a short description of the style.
+1. Add a new entry for your style to the **Preview** table in `README.md`, keeping all styles sorted in strict alphabetical order.
+1. Open a pull request with a short description of your new style.
+1. GitHub Actions will automatically generate and commit the updated PNG preview image once merged.
 
 ### Other changes
 
