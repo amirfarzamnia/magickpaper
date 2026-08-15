@@ -69,10 +69,7 @@
     trim-trailing-whitespace.enable = true;
 
     # Documentation & Markup
-    markdownlint = {
-      enable = true;
-      settings.configuration.MD013 = false;
-    };
+    markdownlint.enable = true;
 
     # Nix
     deadnix.enable = true;
