@@ -31,6 +31,13 @@ if ! command -v magick &>/dev/null; then
   error_exit "ImageMagick (magick) is required but not installed."
 fi
 
+IM_VERSION="$(magick -version | head -n1 | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -n1)"
+IM_MAJOR="${IM_VERSION%%.*}"
+
+if [[ -z $IM_MAJOR || $IM_MAJOR -lt 7 ]]; then
+  error_exit "ImageMagick 7+ is required (found version: ${IM_VERSION:-unknown})."
+fi
+
 # ---------------------------------------------------------------------
 # DEFAULT PARAMETERS
 # ---------------------------------------------------------------------
@@ -60,12 +67,43 @@ while getopts "s:w:h:o:c:p:" opt; do
 done
 
 # ---------------------------------------------------------------------
+# DIMENSION VALIDATION
+# ---------------------------------------------------------------------
+for dim_name in TARGET_WIDTH TARGET_HEIGHT; do
+  dim_value="${!dim_name}"
+
+  if [[ ! $dim_value =~ ^[1-9][0-9]*$ ]]; then
+    error_exit "${dim_name} must be a positive integer (got: '${dim_value}')."
+  fi
+done
+
+# ---------------------------------------------------------------------
+# OUTPUT PATH VALIDATION
+# ---------------------------------------------------------------------
+OUTPUT_DIR="$(dirname "$OUTPUT_FILE")"
+
+if [[ ! -d $OUTPUT_DIR ]]; then
+  error_exit "Output directory '${OUTPUT_DIR}' does not exist."
+fi
+
+if [[ ! -w $OUTPUT_DIR ]]; then
+  error_exit "Output directory '${OUTPUT_DIR}' is not writable."
+fi
+
+# ---------------------------------------------------------------------
 # PALETTE RESOLUTION
 # ---------------------------------------------------------------------
 export COLORS=()
+HEX_PATTERN='^#[0-9a-fA-F]{6}$'
 
 if [[ -n $CUSTOM_COLORS ]]; then
   IFS=' ' read -r -a COLORS <<<"$CUSTOM_COLORS"
+
+  for color in "${COLORS[@]}"; do
+    if [[ ! $color =~ $HEX_PATTERN ]]; then
+      error_exit "Invalid custom color '${color}'. Expected format: #RRGGBB."
+    fi
+  done
 else
   RESOLVED_PALETTE=""
 
@@ -87,6 +125,12 @@ else
     "${base08}" "${base09}" "${base0A}" "${base0B}"
     "${base0C}" "${base0D}" "${base0E}" "${base0F}"
   )
+
+  for i in "${!COLORS[@]}"; do
+    if [[ ! ${COLORS[$i]} =~ $HEX_PATTERN ]]; then
+      error_exit "Palette '${PALETTE}' has a missing or malformed color (index ${i}: '${COLORS[$i]}')."
+    fi
+  done
 fi
 
 if [[ ${#COLORS[@]} -eq 0 ]]; then
