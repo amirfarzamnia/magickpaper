@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Jellybeans (dark)
 # Author: FredHappyface (https://github.com/fredHappyface), converted to Base16 by https://github.com/nonetrix

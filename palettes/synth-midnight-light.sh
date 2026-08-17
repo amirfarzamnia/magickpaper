@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Synth Midnight Terminal Light (light)
 # Author: Michaël Ball (http://github.com/michael-ball/)

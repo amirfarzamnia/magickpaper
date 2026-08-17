@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Eldritch (dark)
 # Author: https://github.com/eldritch-theme

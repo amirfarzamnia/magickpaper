@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Linux VT (dark)
 # Author: j-c-m (https://github.com/j-c-m/)

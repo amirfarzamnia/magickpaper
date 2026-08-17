@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Material Darker (dark)
 # Author: Nate Peterson

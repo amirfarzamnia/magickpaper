@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Tokyo City Terminal Dark (dark)
 # Author: Michaël Ball

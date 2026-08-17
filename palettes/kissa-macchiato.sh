@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Kissa Macchiato (dark)
 # Author: rwendell (https://github.com/rwendell/kissa)

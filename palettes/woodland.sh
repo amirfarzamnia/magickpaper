@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Woodland (dark)
 # Author: Jay Cornwall (https://jcornwall.com)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Embers Light (light)
 # Author: Jannik Siebert (https://github.com/janniks)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Rosé Pine Dawn (light)
 # Author: Emilia Dunfelt <edun@dunfelt.se>

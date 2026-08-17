@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Espresso (dark)
 # Author: Unknown. Maintained by Alex Mirrington (https://github.com/alexmirrington)

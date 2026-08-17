@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Unikitty Dark (dark)
 # Author: Josh W Lewis (@joshwlewis)

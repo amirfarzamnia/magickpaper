@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: OceanicNext (dark)
 # Author: https://github.com/voronianski/oceanic-next-color-scheme

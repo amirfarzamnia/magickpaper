@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Icy Dark (dark)
 # Author: icyphox (https://icyphox.ga)

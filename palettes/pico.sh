@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Pico (dark)
 # Author: PICO-8 (http://www.lexaloffle.com/pico-8.php)

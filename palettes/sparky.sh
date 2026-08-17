@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Sparky (dark)
 # Author: Leila Sother (https://github.com/mixcoac)

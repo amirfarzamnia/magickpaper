@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: tender (dark)
 # Author: Jacobo Tabernero (https://github/com/jacoborus/tender.vim)

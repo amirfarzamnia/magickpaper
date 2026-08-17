@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: pandora (dark)
 # Author: Cassandra Fox

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Ashes (dark)
 # Author: Jannik Siebert (https://github.com/janniks)

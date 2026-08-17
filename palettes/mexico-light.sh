@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Mexico Light (light)
 # Author: Sheldon Johnson

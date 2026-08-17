@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Pasque (dark)
 # Author: Gabriel Fontes (https://github.com/Misterio77)

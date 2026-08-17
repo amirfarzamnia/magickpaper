@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Paraiso (dark)
 # Author: Jan T. Sott

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 CX=$((WIDTH / 2))
 CY=$((HEIGHT / 2))

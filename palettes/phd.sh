@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: PhD (dark)
 # Author: Hennig Hasemann (http://leetless.de/vim.html)

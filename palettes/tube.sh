@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: London Tube (dark)
 # Author: Jan T. Sott

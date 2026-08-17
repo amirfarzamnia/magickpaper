@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Sakura (light)
 # Author: Misterio77 (http://github.com/Misterio77)

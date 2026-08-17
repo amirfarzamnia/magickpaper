@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Da One White (light)
 # Author: NNB (https://github.com/NNBnh)

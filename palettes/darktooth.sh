@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Darktooth (dark)
 # Author: Jason Milkins (https://github.com/jasonm23)

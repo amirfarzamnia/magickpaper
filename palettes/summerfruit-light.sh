@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Summerfruit Light (light)
 # Author: Christopher Corley (http://christop.club/)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Windows NT (dark)
 # Author: Fergus Collins (https://github.com/ferguscollins)

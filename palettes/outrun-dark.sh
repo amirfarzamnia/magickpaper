@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Outrun Dark (dark)
 # Author: Hugo Delahousse (http://github.com/hugodelahousse/)

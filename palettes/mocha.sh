@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Mocha (dark)
 # Author: Chris Kempson (http://chriskempson.com)

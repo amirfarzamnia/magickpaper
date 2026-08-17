@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Grayscale Light (light)
 # Author: Alexandre Gavioli (https://github.com/Alexx2/)

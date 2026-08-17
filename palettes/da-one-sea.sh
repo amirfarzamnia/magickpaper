@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Da One Sea (dark)
 # Author: NNB (https://github.com/NNBnh)

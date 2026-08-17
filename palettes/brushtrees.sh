@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Brush Trees (light)
 # Author: Abraham White <abelincoln.white@gmail.com>

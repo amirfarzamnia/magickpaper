@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Valua (dark)
 # Author: Nonetrix (https://github.com/nonetrix)

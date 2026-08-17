@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Atlas (dark)
 # Author: Alex Lende (https://ajlende.com)

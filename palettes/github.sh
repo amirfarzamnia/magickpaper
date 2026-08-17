@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Github (light)
 # Author: Tinted Theming (https://github.com/tinted-theming)

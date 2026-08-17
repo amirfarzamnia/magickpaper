@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Charcoal Light (light)
 # Author: Mubin Muhammad (https://github.com/mubin6th)

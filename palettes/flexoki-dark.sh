@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Flexoki Dark (dark)
 # Author: Steph Ango (https://github.com/kepano/flexoki)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Decaf (dark)
 # Author: Alex Mirrington (https://github.com/alexmirrington)

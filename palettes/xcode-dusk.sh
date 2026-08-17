@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: XCode Dusk (dark)
 # Author: Elsa Gonsiorowski (https://github.com/gonsie)

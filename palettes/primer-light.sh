@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Primer Light (light)
 # Author: Jimmy Lin

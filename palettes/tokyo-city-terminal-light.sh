@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Tokyo City Terminal Light (light)
 # Author: Michaël Ball

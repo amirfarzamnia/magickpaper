@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Mountain (dark)
 # Author: gnsfujiwara (https://github.com/gnsfujiwara)

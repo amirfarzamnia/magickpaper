@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Ascendancy (dark)
 # Author: EmergentMind (https://github.com/emergentmind/ascendancy-scheme)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Unikitty Light (light)
 # Author: Josh W Lewis (@joshwlewis)

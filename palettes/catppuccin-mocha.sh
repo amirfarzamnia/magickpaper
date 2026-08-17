@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Catppuccin Mocha (dark)
 # Author: https://github.com/catppuccin/catppuccin

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Blue Forest (dark)
 # Author: alonsodomin (https://github.com/alonsodomin)

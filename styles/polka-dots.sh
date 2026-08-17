@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 TILE_SZ=$((120 * SCALE))
 RAD_1=$((TILE_SZ / 4))

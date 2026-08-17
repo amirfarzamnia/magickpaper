@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Apathy (dark)
 # Author: Jannik Siebert (https://github.com/janniks)

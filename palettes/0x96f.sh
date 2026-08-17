@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: 0x96f (dark)
 # Author: Filip Janevski (https://0x96f.dev/theme)

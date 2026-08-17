@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Precious Dark Eleven (dark)
 # Author: 4lex4 <4lex49@zoho.com>

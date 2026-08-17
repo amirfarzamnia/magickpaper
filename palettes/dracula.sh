@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Dracula (dark)
 # Author: clach04 (https://github.com/clach04)

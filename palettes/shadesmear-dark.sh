@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: ShadeSmear Dark (dark)
 # Author: Kyle Giammarco (http://kyle.giammar.co)

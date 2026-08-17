@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Porple (dark)
 # Author: Niek den Breeje (https://github.com/AuditeMarlow)

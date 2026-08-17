@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Humanoid dark (dark)
 # Author: Thomas (tasmo) Friese

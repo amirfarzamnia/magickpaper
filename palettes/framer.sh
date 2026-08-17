@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Framer (dark)
 # Author: Framer (Maintained by Jesse Hoyos)

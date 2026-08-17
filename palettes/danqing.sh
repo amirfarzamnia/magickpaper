@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: DanQing (dark)
 # Author: Wenhan Zhu (Cosmos) (zhuwenhan950913@gmail.com)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Kanagawa (dark)
 # Author: Tommaso Laurenzi (https://github.com/rebelot)

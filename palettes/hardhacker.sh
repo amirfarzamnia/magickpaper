@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Hardhacker (dark)
 # Author: fe2-Nyxar, based on the https://github.com/hardhackerlabs

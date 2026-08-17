@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Tokyodark Terminal (dark)
 # Author: Tiagovla (https://github.com/tiagovla/)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Oxocarbon Light (light)
 # Author: shaunsingh/IBM, Tinted Theming (https://github.com/tinted-theming)

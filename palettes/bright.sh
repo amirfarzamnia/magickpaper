@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Bright (dark)
 # Author: Chris Kempson (http://chriskempson.com)

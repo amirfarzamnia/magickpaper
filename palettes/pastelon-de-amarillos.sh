@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Pastelón de Amarillos (light)
 # Author: Richard Martinez (https://sonofmartinus.com)

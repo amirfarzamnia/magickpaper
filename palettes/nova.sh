@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Nova (dark)
 # Author: George Essig (https://github.com/gessig), Trevor D. Miller (https://trevordmiller.com)

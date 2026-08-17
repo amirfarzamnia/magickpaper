@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Penumbra Light (light)
 # Author: Zachary Weiss (https://github.com/zacharyweiss)

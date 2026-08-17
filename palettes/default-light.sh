@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Default Light (light)
 # Author: Chris Kempson (http://chriskempson.com)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Lichen Chartreuse Dark (dark)
 # Author: Aaron Colichia (https://aaron.colichia.org/)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Blueish (dark)
 # Author: Ben Mayoras

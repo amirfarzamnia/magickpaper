@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Windows 10 Light (light)
 # Author: Fergus Collins (https://github.com/ferguscollins)

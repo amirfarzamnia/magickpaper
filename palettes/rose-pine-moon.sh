@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Rosé Pine Moon (dark)
 # Author: Emilia Dunfelt <edun@dunfelt.se>

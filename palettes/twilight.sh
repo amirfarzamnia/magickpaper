@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Twilight (dark)
 # Author: David Hart (https://github.com/hartbit)

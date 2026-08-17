@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Marrakesh (dark)
 # Author: Alexandre Gavioli (http://github.com/Alexx2/)

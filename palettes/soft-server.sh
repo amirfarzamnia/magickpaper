@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Soft Server (dark)
 # Author: FredHappyface (https://github.com/fredHappyface)
