@@ -2,8 +2,8 @@ name: Generate Style Previews
 on:
   push:
     paths:
-      - 'styles/**'
-      - 'magickpaper.sh'
+      - styles/**
+      - magickpaper.sh
   workflow_dispatch:
 jobs:
   generate-previews:
