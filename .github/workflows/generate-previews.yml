@@ -2,8 +2,8 @@ name: Generate Style Previews
 on:
   push:
     paths:
-      - styles/**
-      - magickpaper.sh
+      - 'styles/**'
+      - 'magickpaper.sh'
   workflow_dispatch:
 jobs:
   generate-previews:
@@ -37,7 +37,11 @@ jobs:
             output="$OUTPUT_DIR/$style.png"
 
             echo "Generating $output"
-            bash "$GENERATOR" -s "$style" -w "$WIDTH" -h "$HEIGHT" -o "$output"
+            bash "$GENERATOR" \
+              -s "$style" \
+              -w "$WIDTH" \
+              -h "$HEIGHT" \
+              -o "$output"
           done
 
           echo "Previews are available in $OUTPUT_DIR"
