@@ -4,9 +4,6 @@ Generate procedural wallpapers with ImageMagick.
 
 Pick a style and a color palette, then get a PNG. Everything is generated from shell scripts, so it works well for wallpaper rotation, rice setups, and cron jobs.
 
-> [!NOTE]
-> Some styles are inspired by the wallpaper collection at [huedini.io](https://www.huedini.io).
-
 ## Preview
 
 | | | |
