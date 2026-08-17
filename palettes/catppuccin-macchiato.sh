@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Catppuccin Macchiato (dark)
 # Author: https://github.com/catppuccin/catppuccin

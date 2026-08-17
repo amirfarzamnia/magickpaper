@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: iA Light (light)
 # Author: iA Inc. (modified by aramisgithub)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Chicago Day (light)
 # Author: Wendell, Ryan <ryanjwendell@gmail.com>

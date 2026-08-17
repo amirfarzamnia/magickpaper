@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 SIZE=$((60 * SCALE))
 R=$SIZE

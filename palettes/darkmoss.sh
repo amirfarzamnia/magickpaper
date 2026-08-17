@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: darkmoss (dark)
 # Author: Gabriel Avanzi (https://github.com/avanzzzi)

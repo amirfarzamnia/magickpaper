@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Summerfruit Dark (dark)
 # Author: Christopher Corley (http://christop.club/)

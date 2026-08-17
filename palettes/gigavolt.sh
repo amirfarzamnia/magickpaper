@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Gigavolt (dark)
 # Author: Aidan Swope (http://github.com/Whillikers)

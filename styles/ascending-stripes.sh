@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 DIAG_W=$((WIDTH * 2))
 # shellcheck disable=SC2046

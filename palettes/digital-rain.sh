@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Digital Rain (dark)
 # Author: Nathan Byrd (https://github.com/cognitivegears)

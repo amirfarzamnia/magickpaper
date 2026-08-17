@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: OneDark (dark)
 # Author: Lalit Magant (http://github.com/tilal6991)

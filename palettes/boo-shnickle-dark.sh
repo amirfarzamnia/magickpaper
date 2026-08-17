@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: boo-shnickle (dark)
 # Author: boo-shnickle (@boo_shnickle)

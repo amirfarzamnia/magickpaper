@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Yesterday (dark)
 # Author: FroZnShiva (https://github.com/FroZnShiva)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Classic Dark (dark)
 # Author: Jason Heeris (http://heeris.id.au)

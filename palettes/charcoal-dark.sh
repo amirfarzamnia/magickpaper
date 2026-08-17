@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Charcoal Dark (dark)
 # Author: Mubin Muhammad (https://github.com/mubin6th)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: pinky (dark)
 # Author: Benjamin (https://github.com/b3nj5m1n)

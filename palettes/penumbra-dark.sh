@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Penumbra Dark (dark)
 # Author: Zachary Weiss (https://github.com/zacharyweiss)

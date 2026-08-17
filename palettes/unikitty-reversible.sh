@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Unikitty Reversible (dark)
 # Author: Josh W Lewis (@joshwlewis)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Arroz con Dulce (light)
 # Author: Richard Martinez

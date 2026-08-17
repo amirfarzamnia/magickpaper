@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: summercamp (dark)
 # Author: zoe firi (zoefiri.github.io)

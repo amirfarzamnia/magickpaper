@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Chicago Night (dark)
 # Author: Wendell, Ryan <ryanjwendell@gmail.com>

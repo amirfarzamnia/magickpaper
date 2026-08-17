@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Aztec (dark)
 # Author: TheNeverMan (github.com/TheNeverMan)

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 TILE_SIZE=$((100 * SCALE))
 STROKE_WIDTH=$((4 * SCALE))

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Atelier Forest (dark)
 # Author: Bram de Haan (http://atelierbramdehaan.nl)

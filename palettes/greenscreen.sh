@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Green Screen (dark)
 # Author: Chris Kempson (http://chriskempson.com)

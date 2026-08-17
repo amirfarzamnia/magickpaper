@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: One Light (light)
 # Author: Daniel Pfeifer (http://github.com/purpleKarrot)

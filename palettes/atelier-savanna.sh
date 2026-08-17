@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Atelier Savanna (dark)
 # Author: Bram de Haan (http://atelierbramdehaan.nl)

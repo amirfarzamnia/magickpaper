@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Dark Violet (dark)
 # Author: ruler501 (https://github.com/ruler501/base16-darkviolet)

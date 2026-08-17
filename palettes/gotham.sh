@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Gotham (dark)
 # Author: Andrea Leopardi (arranged by Brett Jones)

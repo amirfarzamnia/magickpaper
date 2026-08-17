@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Nord Light (light)
 # Author: threddast, based on fuxialexander's doom-nord-light-theme (Doom Emacs)

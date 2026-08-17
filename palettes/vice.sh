@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: vice (dark)
 # Author: Thomas Leon Highbaugh thighbaugh@zoho.com

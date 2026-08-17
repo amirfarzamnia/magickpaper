@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Horizon Dark (dark)
 # Author: Michaël Ball (http://github.com/michael-ball/)

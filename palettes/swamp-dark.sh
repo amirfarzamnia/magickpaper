@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Swamp Dark (dark)
 # Author: Masroof Maindak (https://github.com/masroof-maindak)

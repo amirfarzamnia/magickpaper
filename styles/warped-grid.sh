@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 CELL_SIZE=$((120 * SCALE))
 PERTURB_MAX=$((CELL_SIZE * 30 / 100))

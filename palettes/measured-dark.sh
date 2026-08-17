@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Measured Dark (dark)
 # Author: Measured (https://measured.co)

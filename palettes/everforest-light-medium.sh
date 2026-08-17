@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Everforest Light (Medium) (light)
 # Author: Márcio Sobel (https://github.com/marciosobel)

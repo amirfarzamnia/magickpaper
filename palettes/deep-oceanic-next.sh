@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Deep Oceanic Next (dark)
 # Author: spearkkk (https://github.com/spearkkk)

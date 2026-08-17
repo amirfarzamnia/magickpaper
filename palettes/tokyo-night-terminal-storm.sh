@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Tokyo Night Terminal Storm (dark)
 # Author: Michaël Ball

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Solarized Dark (dark)
 # Author: Ethan Schoonover (modified by aramisgithub)

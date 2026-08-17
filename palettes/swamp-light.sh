@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Swamp Light (light)
 # Author: Masroof Maindak (https://github.com/masroof-maindak)

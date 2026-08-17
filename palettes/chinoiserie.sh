@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Chinoiserie (light)
 # Author: Di Wang (https://cs.cmu.edu/~diw3)

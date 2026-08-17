@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Macintosh (dark)
 # Author: Rebecca Bettencourt (http://www.kreativekorp.com)

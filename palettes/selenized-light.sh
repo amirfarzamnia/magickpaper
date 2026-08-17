@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: selenized-light (light)
 # Author: Jan Warchol (https://github.com/jan-warchol/selenized) / adapted to base16 by ali

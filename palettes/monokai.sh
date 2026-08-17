@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Monokai (dark)
 # Author: Wimer Hazenberg (http://www.monokai.nl)

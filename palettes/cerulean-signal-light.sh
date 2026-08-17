@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Cerulean Signal Light (light)
 # Author: Aaron Colichia (https://aaron.colichia.org/)

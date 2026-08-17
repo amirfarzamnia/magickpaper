@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Black Metal (Gorgoroth) (dark)
 # Author: metalelf0 (https://github.com/metalelf0)

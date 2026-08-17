@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: iA Dark (dark)
 # Author: iA Inc. (modified by aramisgithub)

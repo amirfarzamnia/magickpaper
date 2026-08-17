@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: eris (dark)
 # Author: ed (https://codeberg.org/ed), Tinted Theming (https://github.com/tinted-theming)

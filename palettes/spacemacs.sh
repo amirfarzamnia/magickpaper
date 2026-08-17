@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Spacemacs (dark)
 # Author: Nasser Alshammari (https://github.com/nashamri/spacemacs-theme)

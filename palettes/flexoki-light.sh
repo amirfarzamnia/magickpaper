@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Flexoki Light (light)
 # Author: Steph Ango (https://github.com/kepano/flexoki)

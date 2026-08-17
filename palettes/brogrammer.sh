@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Brogrammer (dark)
 # Author: Vik Ramanujam (http://github.com/piggyslasher)

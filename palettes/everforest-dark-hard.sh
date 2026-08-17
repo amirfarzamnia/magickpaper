@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Everforest Dark Hard (dark)
 # Author: Sainnhe Park (https://github.com/sainnhe)

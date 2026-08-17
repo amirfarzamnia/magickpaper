@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Precious Light Warm (light)
 # Author: 4lex4 <4lex49@zoho.com>

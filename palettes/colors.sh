@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Colors (dark)
 # Author: mrmrs (http://clrs.cc)

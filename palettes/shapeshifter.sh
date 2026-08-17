@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Shapeshifter (light)
 # Author: Tyler Benziger (http://tybenz.com)

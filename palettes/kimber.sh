@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Kimber (dark)
 # Author: Mishka Nguyen (https://github.com/akhsiM)

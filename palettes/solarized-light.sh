@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Solarized Light (light)
 # Author: Ethan Schoonover (modified by aramisgithub)

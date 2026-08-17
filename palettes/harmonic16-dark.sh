@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Harmonic16 Dark (dark)
 # Author: Jannik Siebert (https://github.com/janniks)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Google Dark (dark)
 # Author: Seth Wright (http://sethawright.com)

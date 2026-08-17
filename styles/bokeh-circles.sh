@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 DRAW_CMD=""
 for ((i = 1; i <= 80; i++)); do

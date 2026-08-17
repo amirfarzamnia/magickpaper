@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 AMPLITUDE=$((180 * SCALE))
 WAVELENGTH=$WIDTH

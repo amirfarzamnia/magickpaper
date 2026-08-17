@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Ocean (dark)
 # Author: Chris Kempson (http://chriskempson.com)

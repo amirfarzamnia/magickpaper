@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Github Dark High Contrast (dark)
 # Author: Tinted Theming (https://github.com/tinted-theming)

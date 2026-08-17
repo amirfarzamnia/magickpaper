@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Tango (dark)
 # Author: @Schnouki, based on the Tango Desktop Project

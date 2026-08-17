@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: standardized-light (light)
 # Author: ali (https://github.com/ali-githb/base16-standardized-scheme)

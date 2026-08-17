@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Humanoid light (light)
 # Author: Thomas (tasmo) Friese

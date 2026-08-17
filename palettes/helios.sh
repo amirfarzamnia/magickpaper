@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Helios (dark)
 # Author: Alex Meyer (https://github.com/reyemxela)

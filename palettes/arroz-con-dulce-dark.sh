@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Arroz con Dulce Dark (dark)
 # Author: Richard Martinez

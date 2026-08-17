@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Kissa Latte (light)
 # Author: rwendell (https://github.com/rwendell/kissa)

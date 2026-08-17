@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Railscasts (dark)
 # Author: Ryan Bates (http://railscasts.com)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Tokyo Night Moon (dark)
 # Author: Ólafur Bjarki Bogason

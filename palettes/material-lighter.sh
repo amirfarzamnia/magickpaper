@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Material Lighter (light)
 # Author: Nate Peterson

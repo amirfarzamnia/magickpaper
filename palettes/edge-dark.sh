@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Edge Dark (dark)
 # Author: cjayross (https://github.com/cjayross), Tinted Theming (https://github.com/tinted-theming)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: 3024 (dark)
 # Author: Jan T. Sott (http://github.com/idleberg)

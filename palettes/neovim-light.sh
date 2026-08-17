@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Neovim Light (light)
 # Author: https://github.com/neovim/neovim/blob/master/src/nvim/highlight_group.c

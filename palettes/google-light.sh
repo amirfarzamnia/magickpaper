@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Google Light (light)
 # Author: Seth Wright (http://sethawright.com)

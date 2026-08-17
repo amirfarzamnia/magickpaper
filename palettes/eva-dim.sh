@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Eva Dim (dark)
 # Author: kjakapat (https://github.com/kjakapat)

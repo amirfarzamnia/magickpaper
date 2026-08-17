@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Atelier Sulphurpool Light (light)
 # Author: Bram de Haan (http://atelierbramdehaan.nl)

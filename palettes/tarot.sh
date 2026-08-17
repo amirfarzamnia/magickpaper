@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: tarot (dark)
 # Author: ed (https://codeberg.org/ed)

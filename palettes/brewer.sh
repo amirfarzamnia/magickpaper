@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Brewer (dark)
 # Author: Timothée Poisot (http://github.com/tpoisot)

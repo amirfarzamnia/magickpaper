@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Moonlight (dark)
 # Author: Jeremy Swinarton (https://github.com/jswinarton)

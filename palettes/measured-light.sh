@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Measured Light (light)
 # Author: Measured (https://measured.co)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Heetch Dark (dark)
 # Author: Geoffrey Teale (tealeg@gmail.com)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Equilibrium Gray Dark (dark)
 # Author: Carlo Abelli

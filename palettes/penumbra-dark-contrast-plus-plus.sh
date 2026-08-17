@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: Penumbra Dark Contrast Plus Plus (dark)
 # Author: Zachary Weiss (https://github.com/zacharyweiss)

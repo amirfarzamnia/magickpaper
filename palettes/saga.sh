@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Scheme: SAGA (dark)
 # Author: https://github.com/SAGAtheme/SAGA
