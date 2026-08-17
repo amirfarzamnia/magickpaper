@@ -1,5 +1,10 @@
 # magickpaper
 
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/amirfarzamnia/magickpaper/ci.yml?style=flat-square&logo=github&logoColor=1e1e2e&labelColor=f9e2af&color=1e1e2e&label=tests)](https://github.com/amirfarzamnia/magickpaper/actions)
+[![GitHub Repo Stars](https://img.shields.io/github/stars/amirfarzamnia/magickpaper?style=flat-square&logo=github&logoColor=1e1e2e&labelColor=f9e2af&color=1e1e2e)](https://github.com/amirfarzamnia/magickpaper/stargazers)
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/amirfarzamnia/magickpaper?style=flat-square&logo=github&logoColor=1e1e2e&labelColor=f9e2af&color=1e1e2e)](https://github.com/amirfarzamnia/magickpaper/stargazers)
+[![GitHub License](https://img.shields.io/github/license/amirfarzamnia/magickpaper?style=flat-square&logo=github&logoColor=1e1e2e&labelColor=f9e2af&color=1e1e2e)](https://github.com/amirfarzamnia/magickpaper/blob/main/LICENSE)
+
 Generate procedural wallpapers with ImageMagick.
 
 Pick a style and a color palette, then get a PNG. Everything is generated from shell scripts, so it works well for wallpaper rotation, rice setups, and cron jobs.
