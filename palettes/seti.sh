@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Scheme: Seti UI (dark)
-# Author: 
+# Author:
 
 export base00="#151718"
 export base01="#282a2b"
