@@ -101,24 +101,36 @@ if [[ -n $CUSTOM_COLORS ]]; then
   IFS=' ' read -r -a COLORS <<<"$CLEAN_COLORS"
 
   VALID_COLORS=()
+
   for color in "${COLORS[@]}"; do
     [[ -z $color ]] && continue
 
     if [[ ! $color =~ $HEX_PATTERN ]]; then
       error_exit "Invalid custom color '${color}'. Expected format: #RRGGBB."
     fi
+
     VALID_COLORS+=("$color")
   done
+
   COLORS=("${VALID_COLORS[@]}")
 else
   RESOLVED_PALETTE=""
 
-  if [[ -f "${SCRIPT_DIR}/palettes/${PALETTE}.sh" ]]; then
+  # Direct file path takes precedence.
+  if [[ -f $PALETTE ]]; then
+    RESOLVED_PALETTE="$PALETTE"
+
+  # Repository palette with .sh extension.
+  elif [[ -f "${SCRIPT_DIR}/palettes/${PALETTE}.sh" ]]; then
     RESOLVED_PALETTE="${SCRIPT_DIR}/palettes/${PALETTE}.sh"
+
+  # Repository palette without .sh extension.
   elif [[ -f "${SCRIPT_DIR}/palettes/${PALETTE}" ]]; then
     RESOLVED_PALETTE="${SCRIPT_DIR}/palettes/${PALETTE}"
+
   else
-    error_exit "Palette preset '${PALETTE}' not found in '${SCRIPT_DIR}/palettes/'."
+    error_exit \
+      "Palette '${PALETTE}' not found. Expected a palette name in '${SCRIPT_DIR}/palettes/' or a valid file path."
   fi
 
   # shellcheck disable=SC1090
@@ -134,15 +146,20 @@ else
 
   for i in "${!COLORS[@]}"; do
     if [[ ! ${COLORS[$i]} =~ $HEX_PATTERN ]]; then
-      error_exit "Palette '${PALETTE}' has a missing or malformed color (index ${i}: '${COLORS[$i]}')."
+      error_exit \
+        "Palette '${PALETTE}' has a missing or malformed color (index ${i}: '${COLORS[$i]}')."
     fi
   done
 fi
 
 if [[ ${#COLORS[@]} -eq 0 ]]; then
-  error_exit "No colors loaded. Check your custom hex formatting or palette file syntax."
+  error_exit \
+    "No colors loaded. Check your custom hex formatting or palette file syntax."
 fi
 
+# ---------------------------------------------------------------------
+# RENDER DIMENSIONS
+# ---------------------------------------------------------------------
 export WIDTH=$((TARGET_WIDTH * SCALE))
 export HEIGHT=$((TARGET_HEIGHT * SCALE))
 
@@ -152,31 +169,60 @@ export HEIGHT=$((TARGET_HEIGHT * SCALE))
 get_palette_expr() {
   local direction="$1"
   local cmd=""
+
   for color in "${COLORS[@]}"; do
     cmd+=" -size 1x1 xc:${color}"
   done
+
   cmd+=" ${direction}"
+
   echo "$cmd"
 }
 
 get_clut_expr() {
   local cmd="( -size 1x1"
+
   for color in "${COLORS[@]}"; do
     cmd+=" xc:${color}"
   done
+
   cmd+=" +append )"
+
   echo "$cmd"
 }
 
 # ---------------------------------------------------------------------
-# WALLPAPER GENERATION ENGINE (MODULAR)
+# STYLE RESOLUTION
 # ---------------------------------------------------------------------
-STYLE_FILE="${SCRIPT_DIR}/styles/${STYLE}.sh"
+STYLE_FILE=""
 
-if [[ ! -f $STYLE_FILE ]]; then
-  error_exit "Unknown style: '$STYLE'"
+# Direct file path takes precedence.
+if [[ -f $STYLE ]]; then
+  STYLE_FILE="$STYLE"
+
+# Repository style with .sh extension.
+elif [[ -f "${SCRIPT_DIR}/styles/${STYLE}.sh" ]]; then
+  STYLE_FILE="${SCRIPT_DIR}/styles/${STYLE}.sh"
+
+# Repository style without .sh extension.
+elif [[ -f "${SCRIPT_DIR}/styles/${STYLE}" ]]; then
+  STYLE_FILE="${SCRIPT_DIR}/styles/${STYLE}"
+
+else
+  error_exit \
+    "Unknown style '${STYLE}'. Expected a style name in '${SCRIPT_DIR}/styles/' or a valid file path."
 fi
 
-# Source the individual style file to inherit local scope and execute layout
+# ---------------------------------------------------------------------
+# WALLPAPER GENERATION
+# ---------------------------------------------------------------------
+# The style receives:
+#   COLORS
+#   WIDTH
+#   HEIGHT
+#   OUTPUT_FILE
+#   get_palette_expr
+#   get_clut_expr
+#
 # shellcheck disable=SC1090
 source "$STYLE_FILE"

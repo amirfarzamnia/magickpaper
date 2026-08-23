@@ -122,8 +122,8 @@ magickpaper -s <style> -p <palette> -w <width> -h <height> -o <output.png>
 
 | Option | Description | Default |
 | --- | --- | --- |
-| `-s` | Style name from `styles/` | `vertical-stripes` |
-| `-p` | Palette name from `palettes/` | `catppuccin-mocha` |
+| `-s` | Style name from `styles/` or direct file path | `vertical-stripes` |
+| `-p` | Palette name from `palettes/` or direct file path | `catppuccin-mocha` |
 | `-w` | Width in pixels | `3840` |
 | `-h` | Height in pixels | `2160` |
 | `-o` | Output file | `wallpaper.png` |
@@ -145,10 +145,22 @@ Use a different style:
 magickpaper -s waves -o wallpaper.png
 ```
 
+Use a custom external style path:
+
+```sh
+magickpaper -s /path/to/custom_style.sh -o wallpaper.png
+```
+
 Use a different palette:
 
 ```sh
 magickpaper -s hexagon-honeycomb -p gruvbox-dark-hard -o wallpaper.png
+```
+
+Use a custom external palette path:
+
+```sh
+magickpaper -s waves -p /path/to/custom_palette.sh -o wallpaper.png
 ```
 
 Use your own colors:
@@ -167,7 +179,7 @@ magickpaper -s bokeh-circles -w 1920 -h 1080 -o wallpaper.png
 
 ## Styles
 
-Styles are shell scripts in `styles/`.
+Styles are shell scripts in `styles/` or provided via custom script paths.
 
 Each style receives:
 
@@ -178,11 +190,9 @@ Each style receives:
 - `get_palette_expr`
 - `get_clut_expr`
 
-To add a style, create a new `styles/<name>.sh` file. No registration is needed. The filename becomes the value passed to `-s`.
-
 ## Palettes
 
-Palettes are shell scripts in `palettes/`.
+Palettes are shell scripts in `palettes/` or provided via custom script paths.
 
 They define the standard Base16 colors:
 
