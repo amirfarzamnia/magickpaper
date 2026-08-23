@@ -1,9 +1,7 @@
 {
   description = "A tool for generating procedural wallpapers with ImageMagick";
 
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-  };
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
   outputs =
     { self, nixpkgs, ... }:
@@ -95,17 +93,17 @@
       apps = forAllSystems (
         { system, ... }:
         let
-          pkg = self.packages.${system}.magickpaper;
+          program = lib.getExe self.packages.${system}.magickpaper;
         in
         {
           default = {
             type = "app";
-            program = lib.getExe pkg;
+            inherit program;
           };
 
           magickpaper = {
             type = "app";
-            program = lib.getExe pkg;
+            inherit program;
           };
         }
       );
