@@ -97,13 +97,19 @@ export COLORS=()
 HEX_PATTERN='^#[0-9a-fA-F]{6}$'
 
 if [[ -n $CUSTOM_COLORS ]]; then
-  IFS=' ' read -r -a COLORS <<<"$CUSTOM_COLORS"
+  CLEAN_COLORS="${CUSTOM_COLORS//,/ }"
+  IFS=' ' read -r -a COLORS <<<"$CLEAN_COLORS"
 
+  VALID_COLORS=()
   for color in "${COLORS[@]}"; do
+    [[ -z $color ]] && continue
+
     if [[ ! $color =~ $HEX_PATTERN ]]; then
       error_exit "Invalid custom color '${color}'. Expected format: #RRGGBB."
     fi
+    VALID_COLORS+=("$color")
   done
+  COLORS=("${VALID_COLORS[@]}")
 else
   RESOLVED_PALETTE=""
 
